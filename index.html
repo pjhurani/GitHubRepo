@@ -32,7 +32,7 @@
 
   <div data-role="page" id="bar">
     <div data-role="header">
-      <h1>This is second page</h1>
+      <h1>This is third page</h1>
     </div><!-- /header -->
 
     <div data-role="content">	
@@ -49,11 +49,53 @@
     <li><a href="#">Cadillac</a></li>
     <li><a href="#">Ferrari</a></li>
 </ul>
+
+<a href="#bar2">Go</a>
     </div><!-- /content -->
     <div data-role="footer">
       <h1>this is my footer</h1>
     </div><!-- /header -->
   </div><!-- /page -->
+
+
+  <div data-role="page" id="bar2">
+    <div data-role="header">
+      <h1>This is second page</h1>
+    </div><!-- /header -->
+
+    <div data-role="content">	
+    <div data-demo-html="true">
+			<div data-role="tabs" id="tabs">
+		      <div data-role="navbar">
+			    <ul>
+			      <li><a href="#one" data-ajax="false">one</a></li>
+			      <li><a href="#two" data-ajax="false">two</a></li>
+			      <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
+			    </ul>
+		      </div>
+		      <div id="one" class="ui-body-d ui-content">
+		        <h1>First tab contents</h1>
+		      </div>
+		      <div id="two">
+		        <ul data-role="listview" data-inset="true">
+		            <li><a href="#">Toyota</a></li>
+		            <li><a href="#">Honda</a></li>
+		            <li><a href="#">Suzuki</a></li>
+		            <li><a href="#">Ford</a></li>
+		            <li><a href="#">Kia</a></li>
+		        </ul>
+		      </div>
+		    </div>
+		</div>
+  </div><!-- /content -->
+    <div data-role="footer">
+      <h1>this is my footer</h1>
+    </div><!-- /header -->
+  </div><!-- /page -->
+
+
+
+
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
