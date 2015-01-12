@@ -108,5 +108,38 @@
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#testLink").click(function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: 'http://echo.jsontest.com/key/value/one/two',
+                data: {
+                    format: 'json'
+                },
+                error: function () {
+                    $('#resultBlock').html('<p>An error has occurred</p>');
+                },
+                dataType: 'jsonp',
+                success: function (data) {
+                    var $first = data.one;
+                    alert("Hello");
+                    alert($first);
+                    var $second = data.key;
+                    $('#resultBlock').append($first).append($second);
+                },
+                type: 'GET'
+            });
+
+
+        });
+
+    });
+</script>
+
 </body>
 </html>
