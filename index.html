@@ -151,12 +151,14 @@
     // Cordova is ready
     //
     function onDeviceReady() {
+        alert("On device read");
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
     }
 
     // onSuccess Geolocation
     //
     function onSuccess(position) {
+        alert("On success");
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: ' + position.coords.latitude + '<br />' +
                             'Longitude: ' + position.coords.longitude + '<br />' +
